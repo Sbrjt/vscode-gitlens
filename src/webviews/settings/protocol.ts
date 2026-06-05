@@ -1,5 +1,5 @@
+import type { IssuesCloudHostIntegrationId } from '@gitlens/integrations/constants.js';
 import type { Config } from '../../config.js';
-import type { IssuesCloudHostIntegrationId } from '../../constants.integrations.js';
 import type { IpcScope } from '../ipc/models/ipc.js';
 import { IpcNotification, IpcRequest } from '../ipc/models/ipc.js';
 import type { WebviewState } from '../protocol.js';

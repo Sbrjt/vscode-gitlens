@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-deprecated -- disabling until we can migrate to the new Lit-based base */
 /*global document IntersectionObserver*/
 import './settings.scss';
+import type { SupportedCloudIntegrationIds } from '@gitlens/integrations/constants.js';
+import { IssuesCloudHostIntegrationId } from '@gitlens/integrations/constants.js';
 import type { ConnectCloudIntegrationsCommandArgs } from '../../../commands/cloudIntegrations.js';
 import type { AutolinkConfig } from '../../../config.js';
-import type { SupportedCloudIntegrationIds } from '../../../constants.integrations.js';
-import { IssuesCloudHostIntegrationId } from '../../../constants.integrations.js';
 import { createCommandLink } from '../../../system/commands.js';
 import type { IpcMessage } from '../../ipc/models/ipc.js';
 import type { UpdateConfigurationParams } from '../../protocol.js';

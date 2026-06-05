@@ -85,6 +85,9 @@ importers:
       '@gitlens/git-github':
         specifier: workspace:*
         version: link:packages/plus/git-github
+      '@gitlens/integrations':
+        specifier: workspace:*
+        version: link:packages/plus/integrations
       '@gitlens/ipc':
         specifier: workspace:*
         version: link:packages/ipc
@@ -425,6 +428,9 @@ importers:
 
   packages/core:
     dependencies:
+      '@gitkraken/provider-apis':
+        specifier: 0.40.0
+        version: 0.40.0(encoding@0.1.13)
       '@octokit/graphql':
         specifier: 9.0.3
         version: 9.0.3
@@ -594,6 +600,34 @@ importers:
         specifier: 'catalog:'
         version: 6.0.3
 
+  packages/plus/integrations:
+    dependencies:
+      '@gitkraken/provider-apis':
+        specifier: 0.40.0
+        version: 0.40.0(encoding@0.1.13)
+      '@gitlens/git':
+        specifier: workspace:*
+        version: link:../../git
+      '@gitlens/git-github':
+        specifier: workspace:*
+        version: link:../git-github
+      '@gitlens/utils':
+        specifier: workspace:*
+        version: link:../../utils
+    devDependencies:
+      '@types/mocha':
+        specifier: 'catalog:'
+        version: 10.0.10
+      esbuild:
+        specifier: 0.28.0
+        version: 0.28.0
+      mocha:
+        specifier: 'catalog:'
+        version: 11.7.6
+      typescript:
+        specifier: 'catalog:'
+        version: 6.0.3
+
   packages/utils:
     dependencies:
       fast-string-truncated-width:
@@ -615,6 +649,22 @@ importers:
       tsx:
         specifier: 'catalog:'
         version: 4.22.3
+      typescript:
+        specifier: 'catalog:'
+        version: 6.0.3
+
+  tests/fixtures/integrations-consumer:
+    dependencies:
+      '@gitlens/git':
+        specifier: workspace:*
+        version: link:../../../packages/git
+      '@gitlens/integrations':
+        specifier: workspace:*
+        version: link:../../../packages/plus/integrations
+      '@gitlens/utils':
+        specifier: workspace:*
+        version: link:../../../packages/utils
+    devDependencies:
       typescript:
         specifier: 'catalog:'
         version: 6.0.3
